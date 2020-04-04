@@ -6,7 +6,7 @@
     
     
     
-    <wb-module deploy-name="repo-server-0.0.1-feature_test.fc52c84">
+    <wb-module deploy-name="server-0.0.1-feature_test.fc52c84">
                                                                 
         
         
@@ -41,15 +41,8 @@
         
         
         
-        <property name="context-root" value="repo-server"/>
-                                                                
-        
-        
-        
-        
-        
-        
         <property name="java-output-path" value="/repo-server/target/classes"/>
+        <property name="context-root" value="server"/>
                                                             
     
     

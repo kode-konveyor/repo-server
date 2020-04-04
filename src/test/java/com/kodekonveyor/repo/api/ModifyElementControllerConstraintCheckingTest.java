@@ -19,7 +19,8 @@ import com.kodekonveyor.annotations.TestedService;
 @RunWith(MockitoJUnitRunner.class)
 @TestedBehaviour("constraint checking")
 @TestedService("ModifyElementController")
-public class ModifyElementControllerConstraintCheckingTest extends ModifyElementControllerTestBase {
+public class ModifyElementControllerConstraintCheckingTest
+    extends ModifyElementControllerTestBase {
 
   @Test
   @DisplayName("ConsistencyCheckService is called with modifications")
