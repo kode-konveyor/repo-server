@@ -1,6 +1,6 @@
 package com.kodekonveyor.authentication;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.*;//NOPMD
 
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
