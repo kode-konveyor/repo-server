@@ -27,9 +27,14 @@
 	<xsl:variable name="parent" select="if($parents[@xsi:type='Package'])
 		then $parents[@xsi:type='Package']
 		else $parents[@xsi:type='Process Step']"/>
+	<xsl:variable name="package" select="$parent[@xsi:type='Package']"/>
         <xsl:choose>
-            <xsl:when test="$parent/@xsi:type='Package'">
-                <xsl:copy-of select="zenta:fullpackageP($parent)"/>
+	    <xsl:when test="count($package) > 0">
+		<xsl:if test="count($package)>1">
+			<xsl:message terminate="yes">More packages containing <xsl:value-of select="$service/@name"/>: <xsl:value-of select="$package/@name"/>
+			</xsl:message>
+		</xsl:if>
+                <xsl:copy-of select="zenta:fullpackageP($package)"/>
             </xsl:when>
             <xsl:when test="$parent/@xsi:type='Process Step'">
                 <xsl:copy-of select="zenta:fullpackage($parent)"/>
