@@ -7,8 +7,4 @@ public class GetServiceByNameServiceTestBase {
   @InjectMocks
   protected GetServiceByNameService getServiceByNameService;
 
-  public GetServiceByNameServiceTestBase() {
-    super();
-  }
-
 }
