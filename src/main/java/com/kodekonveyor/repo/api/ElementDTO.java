@@ -3,7 +3,7 @@ package com.kodekonveyor.repo.api;
 import lombok.Data;
 
 @Data
-class ElementDTO {
+public class ElementDTO {
 
   private String commit;
 

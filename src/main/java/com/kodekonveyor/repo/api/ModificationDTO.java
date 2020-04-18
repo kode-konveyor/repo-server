@@ -5,7 +5,7 @@ import java.util.Set;
 import lombok.Data;
 
 @Data
-class ModificationDTO {
+public class ModificationDTO {
 
   private Set<ElementDTO> created;
 

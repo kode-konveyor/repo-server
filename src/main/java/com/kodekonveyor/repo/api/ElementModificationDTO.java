@@ -3,7 +3,7 @@ package com.kodekonveyor.repo.api;
 import lombok.Data;
 
 @Data
-class ElementModificationDTO {
+public class ElementModificationDTO {
 
   private ElementDTO newElement;
 

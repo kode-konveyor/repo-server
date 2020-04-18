@@ -5,7 +5,7 @@ import java.util.Set;
 import lombok.Data;
 
 @Data
-class ElementWithRelationsDTO {
+public class ElementWithRelationsDTO {
 
   private ElementDTO element;
 

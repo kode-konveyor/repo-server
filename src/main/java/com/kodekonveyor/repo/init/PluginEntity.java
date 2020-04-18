@@ -1,4 +1,4 @@
-package com.kodekonveyor.repo.api;
+package com.kodekonveyor.repo.init;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,22 +7,13 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
-@Data
 @Entity
-public class ElementEntity {
+@Data
+public class PluginEntity {
 
-  private String commit;
-
-  private String description;
+  public String constraintCheckServiceName;
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private String id;
-
-  private String name;
-
-  private String source;
-
-  private String target;
-
+  private long id;
 }
