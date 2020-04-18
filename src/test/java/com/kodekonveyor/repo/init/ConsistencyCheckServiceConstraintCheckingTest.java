@@ -26,7 +26,7 @@ public class ConsistencyCheckServiceConstraintCheckingTest
   @BeforeEach
   void setUp() {
     super.setUp();
-    consistencyCheckService.call(ModificationDTOTestData.get());
+    consistencyCheckService.call(ModificationDTOTestData.get(), null);
   }
 
   @Test

@@ -14,7 +14,8 @@ public class ConsistencyCheckService {
   @Autowired
   private PluginEntityRepository pluginEntityRepository;
 
-  public void call(final ModificationDTO modificationDTO) {
+  public void
+      call(final ModificationDTO modificationDTO, final String repoName) {
 
     final Iterable<PluginEntity> pluginEntities =
         pluginEntityRepository.findAll();

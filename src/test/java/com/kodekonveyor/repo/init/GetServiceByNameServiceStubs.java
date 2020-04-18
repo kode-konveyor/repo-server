@@ -6,7 +6,6 @@ public class GetServiceByNameServiceStubs {
 
   public static void
       behaviour(final GetServiceByNameService getServiceByNameService) {
-    // TODO Auto-generated method stub
     PluginEntityTestData.SERVICE_OBJECT =
         Mockito.mock(ConsistencyChecker.class);
     Mockito.when(

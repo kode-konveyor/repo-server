@@ -9,7 +9,7 @@ import com.kodekonveyor.repo.api.ModificationDTO;
 @Service
 public class ConsistencyChecker {
 
-  public void call(final ModificationDTO modificationDTO) {
+  void call(final ModificationDTO modificationDTO) {
 
   }
 }
