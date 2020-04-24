@@ -11,6 +11,8 @@ public class ElementDTOTestData {
     entity.setName("element name");
     entity.setSourceId("elementId");
     entity.setTargetId("elementId");
+    entity.setSourceTag("SourceTag");
+    entity.setTargetTag("TargetTag");
     return entity;
   }
 

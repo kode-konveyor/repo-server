@@ -15,6 +15,10 @@ class ElementDTO {
 
   private String sourceId;
 
+  private String SourceTag;
+
   private String targetId;
+
+  private String TargetTag;
 
 }

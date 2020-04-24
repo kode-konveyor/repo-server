@@ -6,10 +6,10 @@ public class CreateElementService {
 
   @Autowired
   private ElementEntityRepository elementEntityRepository;
-  /*@Autowired
-  private RepositoryEntityRepository repositoryEntityRepository;*/
 
-  public ElementEntity call(final ElementDTO elementDTO) {
+  public void call(
+      final ElementDTO elementDTO, final RepositoryEntity repositoryEntity
+  ) {
     final ElementEntity elementEntity = new ElementEntity();
     elementEntity.setCommit(elementDTO.getCommit());
     elementEntity.setDescription(elementDTO.getDescription());
@@ -17,12 +17,10 @@ public class CreateElementService {
     elementEntity.setSourceId(elementDTO.getSourceId());
     elementEntity.setTargetId(elementDTO.getTargetId());
     elementEntity.setId(elementDTO.getId());
-    /*final RepositoryEntity entity =
-      repositoryEntityRepository.findByOwner(elementEntity).get(0);
-    elementEntityRepository.save(elementEntity);
-    elementEntity.setRepo(entity);*/
+    elementEntity.setSourceTag(elementDTO.getSourceTag());
+    elementEntity.setTargetTag(elementDTO.getTargetTag());
+    /*elementEntity.setRepo(repositoryEntity);*/
     elementEntityRepository.save(elementEntity);
 
-    return elementEntity;
   }
 }

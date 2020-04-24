@@ -21,10 +21,14 @@ class ElementEntity {
 
   private String name;
 
-  private RepositoryEntity repo;
+  // private RepositoryEntity repo;
 
   private String sourceId;
 
+  private String SourceTag;
+
   private String targetId;
+
+  private String TargetTag;
 
 }

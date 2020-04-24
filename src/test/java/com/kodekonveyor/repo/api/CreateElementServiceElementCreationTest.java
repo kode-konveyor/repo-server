@@ -27,8 +27,8 @@ public class CreateElementServiceElementCreationTest
   @Test
   @DisplayName("ElementEntity is created successfully")
   void test() {
-    // RepositoryEntityStubs.behaviour(repositoryEntityRepository);
-    createElementService.call(ElementDTOTestData.get());
+    createElementService
+        .call(ElementDTOTestData.get(), RepositoryEntityTestData.get());
     Mockito.verify(elementEntityRepository).save(ElementEntityTestData.get());
 
   }
@@ -36,95 +36,108 @@ public class CreateElementServiceElementCreationTest
   @Test
   @DisplayName("ElementEntity created is Empty")
   void testEmptyData() {
-    Mockito.when(elementEntityRepository.save(ElementEntityTestData.get()))
-        .thenReturn(new ElementEntity());
+    createElementService
+        .call(ElementDTOTestData.get(), RepositoryEntityTestData.get());
     assertNotNull(
-        createElementService
-            .call(new ElementDTO())
+        ElementDTOTestData.get()
     );
 
   }
 
   @Test
-  @DisplayName("ElementEntity's commit is not null")
+  @DisplayName("ElementEntity's commit is saved successfully")
   void testEntityCommit() {
-    Mockito.when(elementEntityRepository.save(ElementEntityTestData.get()))
-        .thenReturn(ElementEntityTestData.get());
+    createElementService
+        .call(ElementDTOTestData.get(), RepositoryEntityTestData.get());
+
     assertEquals(
         ElementEntityTestData.get().getCommit(),
-        createElementService.call(ElementDTOTestData.get()).getCommit()
+        ElementDTOTestData.get().getCommit()
     );
 
   }
 
   @Test
-  @DisplayName("ElementEntity's description is created successfully")
+  @DisplayName("ElementEntity's description is saved successfully")
   void testEntitydescription() {
-    Mockito.when(elementEntityRepository.save(ElementEntityTestData.get()))
-        .thenReturn(ElementEntityTestData.get());
+    createElementService
+        .call(ElementDTOTestData.get(), RepositoryEntityTestData.get());
     assertEquals(
         ElementEntityTestData.get().getDescription(),
-        createElementService.call(ElementDTOTestData.get()).getDescription()
+        ElementDTOTestData.get().getDescription()
     );
 
   }
 
   @Test
-  @DisplayName("ElementEntity's name created is not null")
+  @DisplayName("ElementEntity's name is saved successfully")
   void testEntityName() {
-    Mockito.when(elementEntityRepository.save(ElementEntityTestData.get()))
-        .thenReturn(ElementEntityTestData.get());
+    createElementService
+        .call(ElementDTOTestData.get(), RepositoryEntityTestData.get());
     assertEquals(
         ElementEntityTestData.get().getName(),
-        createElementService.call(ElementDTOTestData.get()).getName()
+        ElementDTOTestData.get().getName()
     );
 
   }
 
   @Test
-  @DisplayName("ElementEntity's source Id id not null")
+  @DisplayName("ElementEntity's source Id is saved successfully")
   void testEntitySourceId() {
-    Mockito.when(elementEntityRepository.save(ElementEntityTestData.get()))
-        .thenReturn(ElementEntityTestData.get());
+    createElementService
+        .call(ElementDTOTestData.get(), RepositoryEntityTestData.get());
     assertEquals(
         ElementEntityTestData.get().getSourceId(),
-        createElementService.call(ElementDTOTestData.get()).getSourceId()
+        ElementDTOTestData.get().getSourceId()
     );
 
   }
 
   @Test
-  @DisplayName("ElementEntity's TargetId is not null")
+  @DisplayName("ElementEntity's SourceTag is saved successfully")
+  void testEntitySourceTag() {
+    createElementService
+        .call(ElementDTOTestData.get(), RepositoryEntityTestData.get());
+    assertEquals(
+        ElementEntityTestData.get().getSourceTag(),
+        ElementDTOTestData.get().getSourceTag()
+    );
+
+  }
+
+  @Test
+  @DisplayName("ElementEntity's TargetId is saved successfully")
   void testEntityTargetId() {
-    Mockito.when(elementEntityRepository.save(ElementEntityTestData.get()))
-        .thenReturn(ElementEntityTestData.get());
+    createElementService
+        .call(ElementDTOTestData.get(), RepositoryEntityTestData.get());
     assertEquals(
         ElementEntityTestData.get().getTargetId(),
-        createElementService.call(ElementDTOTestData.get()).getTargetId()
+        ElementDTOTestData.get().getTargetId()
     );
 
   }
 
   @Test
-  @DisplayName("ElementEntity's Id  is not null")
+  @DisplayName("ElementEntity's TargetTag is saved successfully")
+  void testEntityTargetTag() {
+    createElementService
+        .call(ElementDTOTestData.get(), RepositoryEntityTestData.get());
+    assertEquals(
+        ElementEntityTestData.get().getTargetTag(),
+        ElementDTOTestData.get().getTargetTag()
+    );
+
+  }
+
+  @Test
+  @DisplayName("ElementEntity's Id  is saved successfully")
   void testId() {
-    Mockito.when(elementEntityRepository.save(ElementEntityTestData.get()))
-        .thenReturn(ElementEntityTestData.get());
+    createElementService
+        .call(ElementDTOTestData.get(), RepositoryEntityTestData.get());
     assertNotNull(
-        createElementService.call(ElementDTOTestData.get()).getId()
+        ElementDTOTestData.get()
     );
 
   }
 
-  @Test
-  @DisplayName("ElementEntity created is not null")
-  void testNotNull() {
-    Mockito.when(elementEntityRepository.save(ElementEntityTestData.get()))
-        .thenReturn(ElementEntityTestData.get());
-    assertNotNull(
-        createElementService
-            .call(ElementDTOTestData.get())
-    );
-
-  }
 }
