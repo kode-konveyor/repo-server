@@ -306,16 +306,6 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                                  source="6582e39a-af05-4570-b2ae-9403cdcaf53e"
                                  target="df3eabe2-28e4-48a6-83dd-057144cc04a9"
                                  relationship="b61c2d3c-8614-45fb-8bf6-773d2eac4d7e"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="0d964ca0-31cd-4e58-ba5b-c111b132400c"
-                                 source="6582e39a-af05-4570-b2ae-9403cdcaf53e"
-                                 target="03a080c2-df0b-4d84-a3d8-379b0f7cec29"
-                                 relationship="dbd0c1a5-afe0-45ae-80a8-acd1deaaf12b"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="7c1d9407-488f-48a0-8aa5-481b3348c4ab"
-                                 source="6582e39a-af05-4570-b2ae-9403cdcaf53e"
-                                 target="03a080c2-df0b-4d84-a3d8-379b0f7cec29"
-                                 relationship="b4f63a10-0aee-4e42-8667-e74d967e7bf6"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="df3eabe2-28e4-48a6-83dd-057144cc04a9"
@@ -337,11 +327,6 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                                  source="df3eabe2-28e4-48a6-83dd-057144cc04a9"
                                  target="f4a7913a-7174-4877-9bc8-0df206438375"
                                  relationship="71637d7d-e6cc-4d09-be8f-c80627415a29"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="fbc1eb00-8802-4cec-aafd-c6e2d9c20cb2"
-                                 source="df3eabe2-28e4-48a6-83dd-057144cc04a9"
-                                 target="17acd7ac-fb5f-4ff0-a798-16af48098515"
-                                 relationship="2d806315-9321-48bb-925c-e824fda97d80"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="cf4cab96-51ec-4805-9231-57506acffc67"
@@ -358,11 +343,6 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                                  source="cf4cab96-51ec-4805-9231-57506acffc67"
                                  target="3ddeeee7-a167-4130-b249-d71b7b700a8b"
                                  relationship="2643976f-e8e4-4aee-aa00-af2ecc59cb07"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="2d89beb9-5a19-4041-9182-678ee0810a18"
-                                 source="cf4cab96-51ec-4805-9231-57506acffc67"
-                                 target="17acd7ac-fb5f-4ff0-a798-16af48098515"
-                                 relationship="d6924682-0386-407b-b05c-7751e978ff96"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="e1f4e46d-0ab9-4bc6-98c5-5a175ce6b70f"
@@ -385,17 +365,6 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                                  relationship="4420819f-9f58-42e2-a88a-0eb34a6c58a4"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
-                   id="edb60daf-8476-4ee8-bf90-f8bbafcf2dde"
-                   zentaElement="67ba3b96-b561-42ac-935a-efa85ca9bdd4">
-               <bounds x="253" y="588" width="-1" height="-1"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="03a080c2-df0b-4d84-a3d8-379b0f7cec29"
-                   targetConnections="0d964ca0-31cd-4e58-ba5b-c111b132400c 7c1d9407-488f-48a0-8aa5-481b3348c4ab"
-                   zentaElement="0c12e91a-5ff2-4da8-91d0-56d38d041d04">
-               <bounds x="372" y="744" width="-1" height="-1"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
                    id="49126707-67b6-45a4-a34f-3326604bc405"
                    targetConnections="9871bea7-3820-4f83-99e7-69b92f2482a4"
                    zentaElement="76daa7d7-4fe9-4a39-88a0-0e2ce7a120bf">
@@ -412,23 +381,6 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                    targetConnections="1dbcb705-8be9-4cdd-b8a7-ea2a582079ac"
                    zentaElement="f4acbf1b-a755-46a2-ac21-f21465658133">
                <bounds x="768" y="588" width="-1" height="-1"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="17acd7ac-fb5f-4ff0-a798-16af48098515"
-                   targetConnections="fbc1eb00-8802-4cec-aafd-c6e2d9c20cb2 2d89beb9-5a19-4041-9182-678ee0810a18"
-                   zentaElement="5526fe57-7bec-4fbb-b9a2-fbb512761dab">
-               <bounds x="656" y="428" width="-1" height="-1"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="3fd82a18-8407-4b47-abcd-968a11b07ed7"
-                                 source="17acd7ac-fb5f-4ff0-a798-16af48098515"
-                                 target="97d4ca4a-cefe-489a-86fd-1b3f14f348ca"
-                                 relationship="bd8f715a-25f8-492d-8fc2-b5bd33d6dd3c"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="97d4ca4a-cefe-489a-86fd-1b3f14f348ca"
-                   targetConnections="3fd82a18-8407-4b47-abcd-968a11b07ed7"
-                   zentaElement="42c933eb-78af-448c-96dd-3dfbd931d257">
-               <bounds x="656" y="660" width="-1" height="-1"/>
             </child>
          </element>
          <element xsi:type="zenta:BasicObject"
@@ -447,24 +399,6 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                   name="plugin architecture"
                   id="9a7e402b-ffff-4dea-a3b3-26ce16630aa6"
                   ancestor="36a15a23-a4a0-40b5-901b-310f3a1df0c7"/>
-         <element xsi:type="zenta:BasicObject"
-                  name="plugin registry"
-                  id="0c12e91a-5ff2-4da8-91d0-56d38d041d04"
-                  ancestor="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
-         <element xsi:type="zenta:BasicObject"
-                  name="obtain bean by name"
-                  id="5526fe57-7bec-4fbb-b9a2-fbb512761dab"
-                  ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="2d806315-9321-48bb-925c-e824fda97d80"
-                  ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"
-                  source="9eed8a46-50c5-4721-8250-6b32816b40b8"
-                  target="5526fe57-7bec-4fbb-b9a2-fbb512761dab"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="d6924682-0386-407b-b05c-7751e978ff96"
-                  ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"
-                  source="0738c144-55cf-42b1-9675-ba91d9e99f67"
-                  target="5526fe57-7bec-4fbb-b9a2-fbb512761dab"/>
       </folder>
       <folder name="1. API" id="6161722d-3cd7-4989-8faa-676bc1b1517d">
          <element xsi:type="zenta:ZentaDiagramModel"
@@ -964,17 +898,12 @@ plugins define the id of all of the metamodel elements they handle, and look up 
          <child xsi:type="zenta:DiagramObject"
                 id="132d4236-ff52-4a3e-879a-9085bd425bd7"
                 zentaElement="9eed8a46-50c5-4721-8250-6b32816b40b8">
-            <bounds x="576" y="588" height="73"/>
+            <bounds x="576" y="492" height="73"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="ac309e7d-c78d-4b8e-92d5-182ed7ede892"
                 zentaElement="0738c144-55cf-42b1-9675-ba91d9e99f67">
-            <bounds x="576" y="684" height="73"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="1f28bea4-41c2-419d-82d3-d25198d68c04"
-                zentaElement="5526fe57-7bec-4fbb-b9a2-fbb512761dab">
-            <bounds x="576" y="804" width="-1" height="-1"/>
+            <bounds x="576" y="588" height="73"/>
          </child>
       </element>
       <element xsi:type="zenta:BasicRelationship"
@@ -1133,11 +1062,6 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                               target="d8acb235-5cd9-4006-bd6a-743984610ea8"
                               relationship="5a963767-ec00-4645-9e33-d139da5120ff"/>
             <sourceConnection xsi:type="zenta:Connection"
-                              id="26cbea39-5538-4209-aee2-f5d540fecb1b"
-                              source="17bf887b-2318-4845-acab-8d784b0c3bb2"
-                              target="d682a340-89fa-41f0-89ea-ec8d0f392dcd"
-                              relationship="1c4b4a6a-6b82-40a0-865d-c7bc8c6627ba"/>
-            <sourceConnection xsi:type="zenta:Connection"
                               id="360aa1f7-96d4-48a4-93bb-be41d06aa9d5"
                               source="17bf887b-2318-4845-acab-8d784b0c3bb2"
                               target="65629c8d-00ef-4501-b604-09a6fc1e1f03"
@@ -1147,16 +1071,6 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                               source="17bf887b-2318-4845-acab-8d784b0c3bb2"
                               target="25dd2b3f-257b-41d1-957a-5af1ca94085f"
                               relationship="6db267b8-150d-4ec4-9122-666e1ff2bd93"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="c2950817-1aa0-4e0d-a64a-4107760a6039"
-                              source="17bf887b-2318-4845-acab-8d784b0c3bb2"
-                              target="9977a273-59cd-455e-9ef6-2475ebb72333"
-                              relationship="75a7a6ee-ae30-45b8-8ada-a06538cdf5a3"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="4ac81548-ccfd-4d9e-96f0-d9fe2642481b"
-                              source="17bf887b-2318-4845-acab-8d784b0c3bb2"
-                              target="acc53cae-49b8-4b51-a69c-e3b8312e830f"
-                              relationship="dcd84b7d-d515-45a4-936d-308868919f67"/>
             <sourceConnection xsi:type="zenta:Connection"
                               id="7b3975ad-04bb-4223-972b-6100c9dd1140"
                               source="17bf887b-2318-4845-acab-8d784b0c3bb2"
@@ -1222,12 +1136,6 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                 targetConnections="b574fc7d-70fc-4fc8-b21a-11b55c6d2e82"
                 zentaElement="f4acbf1b-a755-46a2-ac21-f21465658133">
             <bounds x="492" y="235" width="-1" height="-1"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="d682a340-89fa-41f0-89ea-ec8d0f392dcd"
-                targetConnections="26cbea39-5538-4209-aee2-f5d540fecb1b"
-                zentaElement="67ba3b96-b561-42ac-935a-efa85ca9bdd4">
-            <bounds x="642" y="235" width="-1" height="-1"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="e7439bfa-2017-434a-b21e-4645d7c06c99"
@@ -1349,18 +1257,6 @@ plugins define the id of all of the metamodel elements they handle, and look up 
             <bounds x="1578" y="396" width="-1" height="-1"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
-                id="9977a273-59cd-455e-9ef6-2475ebb72333"
-                targetConnections="c2950817-1aa0-4e0d-a64a-4107760a6039"
-                zentaElement="5526fe57-7bec-4fbb-b9a2-fbb512761dab">
-            <bounds x="1258" y="235" width="-1" height="-1"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="acc53cae-49b8-4b51-a69c-e3b8312e830f"
-                targetConnections="4ac81548-ccfd-4d9e-96f0-d9fe2642481b"
-                zentaElement="42c933eb-78af-448c-96dd-3dfbd931d257">
-            <bounds x="1408" y="235" width="-1" height="-1"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
                 id="fecb6aeb-d3ab-4cfa-b29e-64e6ffa81adc"
                 targetConnections="7b3975ad-04bb-4223-972b-6100c9dd1140"
                 zentaElement="0738c144-55cf-42b1-9675-ba91d9e99f67">
@@ -1401,7 +1297,7 @@ A constraint violation raises a ConstraintException.
 
 The ConsistencyCheckService service call constraint checking services of all plugins.
 
-It looks up all the plugins, obtains the name of its constraintCheckService, obtains the service registered by that name, and calls it with the modifications.
+It has an @Autowired List of ConsistencyChecker-s and calls all of them with the modifications.
 
 ModifyElementController first looks up the deleted and modified elements using LookupDeletedAndModifiedElementsService. 
 If any of them missing, LookupDeletedAndModifiedElementsService throws a ConstraintException.
@@ -1437,37 +1333,9 @@ the metamodel elements belong to initial_commit
 
 the metamodel checking logic of all plugins are run from MetamodelCheckService
 
-it looks up all the PluginEntities, gets the metamodel check services by name and run them
+it contains an @Autowired List of MetamodelChecker-s and calls the call method of each.
 
 
-</documentation>
-      </element>
-      <element xsi:type="zenta:BasicObject"
-               name="plugin registration"
-               id="67ba3b96-b561-42ac-935a-efa85ca9bdd4"
-               ancestor="behaviour">
-         <documentation>plugins have a @RepoPlugin annotation on their metamodel check service, and the annotation have a paremeter for the constraint check service class
-
-A PluginEntity have the following fields:
-
-* metamodelCheckServiceName:
-
-The name of the service provided by the plugin to check the metamodel of the plugin.
-To be called at initialization time.
-
-* constraintCheckServiceName:
-
-The name of the service provided by the plugin to check the proposed transactions against the constraints of the plugin.
-To be called from ModificationService
-
-
-InitializationService deletes all elements in the plugin registry, discovers all plugins using a ClasspatScanningComponentProvider based on the com.kodekonveyor.repo.RepoPlugin annotation, creates and stores the relevant PluginEntities in the registry.
-
-Relevant documentation:
-
-https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ClassPathScanningCandidateComponentProvider.html
-
-https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/type/filter/AnnotationTypeFilter.html
 </documentation>
       </element>
       <element xsi:type="zenta:BasicObject"
@@ -1562,23 +1430,6 @@ See Version management metamodel for the description of the version metamodel</d
 </documentation>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               id="dcd84b7d-d515-45a4-936d-308868919f67"
-               ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
-               source="e6f3d78d-af6e-4b25-bd77-c73b0c10c823"
-               target="42c933eb-78af-448c-96dd-3dfbd931d257"/>
-      <element xsi:type="zenta:BasicObject"
-               name="obtain bean"
-               id="42c933eb-78af-448c-96dd-3dfbd931d257"
-               ancestor="behaviour">
-         <documentation>returns a managed bean using WebAppInitializer.context.getBean(name)
-</documentation>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               id="bd8f715a-25f8-492d-8fc2-b5bd33d6dd3c"
-               ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"
-               source="5526fe57-7bec-4fbb-b9a2-fbb512761dab"
-               target="42c933eb-78af-448c-96dd-3dfbd931d257"/>
-      <element xsi:type="zenta:BasicRelationship"
                id="a5bfb941-c5a5-42f9-914c-1c3c57c54cd5"
                ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
                source="13a33e79-7cfd-431d-99f3-c4660dfddfed"
@@ -1631,11 +1482,6 @@ See Version management metamodel for the description of the version metamodel</d
                ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
                source="e6f3d78d-af6e-4b25-bd77-c73b0c10c823"
                target="f4acbf1b-a755-46a2-ac21-f21465658133"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="1c4b4a6a-6b82-40a0-865d-c7bc8c6627ba"
-               ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
-               source="e6f3d78d-af6e-4b25-bd77-c73b0c10c823"
-               target="67ba3b96-b561-42ac-935a-efa85ca9bdd4"/>
       <element xsi:type="zenta:BasicRelationship"
                id="273e6ce5-75d1-4ce9-8ebf-554bc2108d38"
                ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
@@ -1822,11 +1668,6 @@ See Version management metamodel for the description of the version metamodel</d
                source="44679c22-73e2-4501-902c-70c462aa006f"
                target="19d51c36-9762-41aa-a57c-f387dd8245a3"/>
       <element xsi:type="zenta:BasicRelationship"
-               id="dbd0c1a5-afe0-45ae-80a8-acd1deaaf12b"
-               ancestor="64fbbfdf-420d-4756-821b-54fab6e7a8d2"
-               source="cc3b74ce-bbcf-4c17-a3b0-838166c7af15"
-               target="0c12e91a-5ff2-4da8-91d0-56d38d041d04"/>
-      <element xsi:type="zenta:BasicRelationship"
                id="f7ab145d-0a34-49a5-8796-88c9d08a0a4f"
                ancestor="d9f4a80e-d07b-4767-ad0a-aa86988783f8"
                source="9eed8a46-50c5-4721-8250-6b32816b40b8"
@@ -1846,11 +1687,6 @@ See Version management metamodel for the description of the version metamodel</d
                ancestor="64fbbfdf-420d-4756-821b-54fab6e7a8d2"
                source="51d96ed3-2df2-410a-ab8d-9e81ab737084"
                target="cbb88d63-a175-42e0-a18b-73697bce9375"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="b4f63a10-0aee-4e42-8667-e74d967e7bf6"
-               ancestor="d9f4a80e-d07b-4767-ad0a-aa86988783f8"
-               source="cc3b74ce-bbcf-4c17-a3b0-838166c7af15"
-               target="0c12e91a-5ff2-4da8-91d0-56d38d041d04"/>
       <element xsi:type="zenta:BasicRelationship"
                id="249abebe-83e6-4973-8c78-15d06828a340"
                ancestor="d9f4a80e-d07b-4767-ad0a-aa86988783f8"
