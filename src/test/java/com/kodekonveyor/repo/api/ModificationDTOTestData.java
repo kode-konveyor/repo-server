@@ -19,7 +19,6 @@ public class ModificationDTOTestData {
     return modificationDTO;
   }
 
-
   public static ModificationDTO getWithWrongSyntax() {
 
     return createModificationDTO(Set.of(),Set.of(ElementDTOTestData.getWithWrongSyntax()),Set.of());

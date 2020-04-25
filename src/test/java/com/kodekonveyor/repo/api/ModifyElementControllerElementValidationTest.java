@@ -65,5 +65,4 @@ extends ModifyElementControllerTestBase {
 
   }
 
-
 }
