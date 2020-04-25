@@ -46,7 +46,6 @@ extends ModifyElementControllerTestBase {
   @Test
   @DisplayName("remote should be accepted")
   public void test4() {
-
     ThrowableTester.assertNoException(()->modifyElementController.call(ModificationDTOTestData.getRemote(),"remoteRepoName","remoteTagName"));
   }
 
