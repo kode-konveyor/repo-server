@@ -11,19 +11,20 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.kodekonveyor.webapp.UrlMapConstants;
+
 @RestController
 public class ModifyElementController {
 
 
   @Autowired
-  private ElementRepository elementRepository;
+  ElementRepository elementRepository;
 
   @Autowired
-  private CheckReferenceService checkReferenceService;
+  CheckReferenceService checkReferenceService;
 
-  @PutMapping("/repo/{repoName}/{tagName}")
-  public ModificationDTO call(@RequestBody final ModificationDTO modification,@PathVariable("repoName")final String repoName ,@PathVariable("tagName")
-  final String tagName) {
+  @PutMapping(UrlMapConstants.MODIFY_ELEMENT_PATH)
+  public ModificationDTO call(@RequestBody final ModificationDTO modification,@PathVariable final String repoName ,@PathVariable final String tagName) {
 
     final Set<ElementDTO> elements = new HashSet<>() ;
     elements.addAll(modification.getCreated());
@@ -43,15 +44,36 @@ public class ModifyElementController {
     final CheckReferenceResultEnum targetReference = checkReferenceService.call(elementEntity, elementEntity.getTarget());
 
 
-    if(CheckReferenceResultEnum.SYNTAX.equals(sourceReference) || CheckReferenceResultEnum.SYNTAX.equals(targetReference))
-      throw new ConstraintException();
+    checkSyntax(sourceReference, targetReference);
 
-    if(CheckReferenceResultEnum.NOT_FOUND_LOCAL.equals(sourceReference) || CheckReferenceResultEnum.NOT_FOUND_LOCAL.equals(targetReference))
-      throw new ConstraintException();
+    checkFoundLocal(sourceReference, targetReference);
 
+    checkNotFoundServer(sourceReference, targetReference);
+
+  }
+
+  private void checkNotFoundServer(
+      final CheckReferenceResultEnum sourceReference,
+      final CheckReferenceResultEnum targetReference
+  ) {
     if(CheckReferenceResultEnum.NOT_FOUND_SERVER.equals(sourceReference) || CheckReferenceResultEnum.NOT_FOUND_SERVER.equals(targetReference))
       throw new ConstraintException();
+  }
 
+  private void checkFoundLocal(
+      final CheckReferenceResultEnum sourceReference,
+      final CheckReferenceResultEnum targetReference
+  ) {
+    if(CheckReferenceResultEnum.NOT_FOUND_LOCAL.equals(sourceReference) || CheckReferenceResultEnum.NOT_FOUND_LOCAL.equals(targetReference))
+      throw new ConstraintException();
+  }
+
+  private void checkSyntax(
+      final CheckReferenceResultEnum sourceReference,
+      final CheckReferenceResultEnum targetReference
+  ) {
+    if(CheckReferenceResultEnum.SYNTAX.equals(sourceReference) || CheckReferenceResultEnum.SYNTAX.equals(targetReference))
+      throw new ConstraintException();
   }
 
   private void addModificationToSet(

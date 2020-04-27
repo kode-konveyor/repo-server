@@ -14,7 +14,7 @@ public class ElementDTOTestData {
 
   public static ElementDTO get() {
     final ElementDTO element = new ElementDTO();
-    element.setCommit("commit");
+    element.setCommit("foundLocalCommit");
     element.setSource("sourceFoundLocal");
     element.setTarget("targetFoundLocal");
     element.setId(FOUND_LOCAL_ID);
@@ -24,7 +24,7 @@ public class ElementDTOTestData {
 
   public static ElementDTO getWithWrongSyntax() {
     final ElementDTO element = new ElementDTO();
-    element.setCommit("commit");
+    element.setCommit("syntaxCommit");
     element.setSource("syntax");
     element.setTarget("syntax");
     element.setId(SYNTAX_ID);
@@ -33,7 +33,7 @@ public class ElementDTOTestData {
   }
   public static ElementDTO getFoundServer() {
     final ElementDTO element = new ElementDTO();
-    element.setCommit("commit");
+    element.setCommit("foundServerCommit");
     element.setSource("sourceFoundServer");
     element.setTarget("targetFoundServer");
     element.setId(FOUND_SERVER_ID);
@@ -42,7 +42,7 @@ public class ElementDTOTestData {
   }
   public static ElementDTO getRemote() {
     final ElementDTO element = new ElementDTO();
-    element.setCommit("commit");
+    element.setCommit("remoteCommit");
     element.setSource("sourceRemote");
     element.setTarget("targetRemote");
     element.setId(REMOTE_ID);
@@ -52,7 +52,7 @@ public class ElementDTOTestData {
 
   public static ElementDTO getNotFoundLocal() {
     final ElementDTO element = new ElementDTO();
-    element.setCommit("commit");
+    element.setCommit("notFoundLocalCommit");
     element.setSource("sourceNotFoundLocal");
     element.setTarget("targetNotFoundLocal");
     element.setId(NOT_FOUND_LOCAL_ID);
@@ -62,7 +62,7 @@ public class ElementDTOTestData {
 
   public static ElementDTO getNotFoundServer() {
     final ElementDTO element = new ElementDTO();
-    element.setCommit("commit");
+    element.setCommit("notFoundServerCommit");
     element.setSource("sourceNotFoundServer");
     element.setTarget("targetNotFoundServer");
     element.setId(NOT_FOUND_SERVER_ID);

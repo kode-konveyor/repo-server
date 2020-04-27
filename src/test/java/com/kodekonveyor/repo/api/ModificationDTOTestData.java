@@ -6,42 +6,61 @@ public class ModificationDTOTestData {
 
   public static ModificationDTO get() {
 
-    return createModificationDTO(Set.of(ElementDTOTestData.get()),Set.of(),Set.of());
-  }
-
-  private static ModificationDTO createModificationDTO(final Set<ElementDTO> created, final Set<ElementDTO> deleted, final Set<ElementModificationDTO> modified) {
     final ModificationDTO modificationDTO = new ModificationDTO();
 
-    modificationDTO.setCreated(created);
-    modificationDTO.setDeleted(deleted);
-    modificationDTO.setModified(modified);
+    modificationDTO.setCreated(Set.of(ElementDTOTestData.get()));
+    modificationDTO.setDeleted(Set.of());
+    modificationDTO.setModified(Set.of());
 
     return modificationDTO;
+
   }
+
 
   public static ModificationDTO getWithWrongSyntax() {
 
-    return createModificationDTO(Set.of(),Set.of(ElementDTOTestData.getWithWrongSyntax()),Set.of());
+    final ModificationDTO modificationDTO = get();
+    modificationDTO.setCreated(Set.of(ElementDTOTestData.getWithWrongSyntax()));
+
+    return modificationDTO;
+
+
   }
 
   public static ModificationDTO getFoundServer() {
 
-    return createModificationDTO(Set.of(ElementDTOTestData.getFoundServer()),Set.of(),Set.of());
+    final ModificationDTO modificationDTO = get();
+    modificationDTO.setCreated(Set.of(ElementDTOTestData.getFoundServer()));
+
+    return modificationDTO;
+
   }
 
   public static ModificationDTO getRemote() {
 
-    return createModificationDTO(Set.of(ElementDTOTestData.getRemote()),Set.of(),Set.of());
+    final ModificationDTO modificationDTO = get();
+    modificationDTO.setCreated(Set.of(ElementDTOTestData.getRemote()));
+
+    return modificationDTO;
+
   }
 
   public static ModificationDTO getNotFoundLocal() {
 
-    return createModificationDTO(Set.of(),Set.of(ElementDTOTestData.getNotFoundLocal()),Set.of());
+    final ModificationDTO modificationDTO = get();
+    modificationDTO.setCreated(Set.of(ElementDTOTestData.getNotFoundLocal()));
+
+    return modificationDTO;
+
   }
 
   public static ModificationDTO getNotFoundServer() {
 
-    return createModificationDTO(Set.of(),Set.of(ElementDTOTestData.getNotFoundServer()),Set.of());
+    final ModificationDTO modificationDTO = get();
+    modificationDTO.setCreated(Set.of(ElementDTOTestData.getNotFoundServer()));
+
+    return modificationDTO;
+
   }
 
 
