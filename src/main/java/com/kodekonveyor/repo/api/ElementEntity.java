@@ -21,7 +21,7 @@ class ElementEntity {
 
   private String name;
 
-  // private RepositoryEntity repo;
+  private RepositoryEntity repo;
 
   private String sourceId;
 

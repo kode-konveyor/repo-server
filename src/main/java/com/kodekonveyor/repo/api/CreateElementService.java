@@ -19,7 +19,7 @@ public class CreateElementService {
     elementEntity.setId(elementDTO.getId());
     elementEntity.setSourceTag(elementDTO.getSourceTag());
     elementEntity.setTargetTag(elementDTO.getTargetTag());
-    /*elementEntity.setRepo(repositoryEntity);*/
+    elementEntity.setRepo(repositoryEntity);
     elementEntityRepository.save(elementEntity);
 
   }

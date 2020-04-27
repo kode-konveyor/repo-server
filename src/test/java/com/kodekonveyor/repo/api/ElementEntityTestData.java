@@ -30,7 +30,7 @@ public class ElementEntityTestData {
     entity.setTargetId(TARGET_ID);
     entity.setSourceTag(SOURCE_TAG);
     entity.setTargetTag(TARGET_TAG);
-    //entity.setRepo(RepositoryEntityTestData.get());
+    entity.setRepo(RepositoryEntityTestData.get());
 
     return entity;
   }
