@@ -55,7 +55,7 @@ public class ModifyElementController {
   private void checkNotFoundServer(
       final CheckReferenceResultEnum sourceReference,
       final CheckReferenceResultEnum targetReference
-  ) {
+      ) {
     if(CheckReferenceResultEnum.NOT_FOUND_SERVER.equals(sourceReference) || CheckReferenceResultEnum.NOT_FOUND_SERVER.equals(targetReference))
       throw new ConstraintException();
   }
@@ -63,7 +63,7 @@ public class ModifyElementController {
   private void checkFoundLocal(
       final CheckReferenceResultEnum sourceReference,
       final CheckReferenceResultEnum targetReference
-  ) {
+      ) {
     if(CheckReferenceResultEnum.NOT_FOUND_LOCAL.equals(sourceReference) || CheckReferenceResultEnum.NOT_FOUND_LOCAL.equals(targetReference))
       throw new ConstraintException();
   }
@@ -71,7 +71,7 @@ public class ModifyElementController {
   private void checkSyntax(
       final CheckReferenceResultEnum sourceReference,
       final CheckReferenceResultEnum targetReference
-  ) {
+      ) {
     if(CheckReferenceResultEnum.SYNTAX.equals(sourceReference) || CheckReferenceResultEnum.SYNTAX.equals(targetReference))
       throw new ConstraintException();
   }

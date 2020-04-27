@@ -18,9 +18,12 @@ public class ModificationDTOTestData {
 
 
   public static ModificationDTO getWithWrongSyntax() {
+    final ElementModificationDTO elementModificationDTO = new ElementModificationDTO();
+    elementModificationDTO.setNewElement(ElementDTOTestData.getWithWrongSyntax());
+    elementModificationDTO.setOldElement(ElementDTOTestData.get());
 
     final ModificationDTO modificationDTO = get();
-    modificationDTO.setCreated(Set.of(ElementDTOTestData.getWithWrongSyntax()));
+    modificationDTO.setModified(Set.of(elementModificationDTO));
 
     return modificationDTO;
 
