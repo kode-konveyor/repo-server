@@ -12,7 +12,7 @@ public class ThrowableTester {// NOPMD
     try {
       thrower.throwException();
     } catch (final Throwable e) {//NOPMD
-      fail("exception thrown");
+      fail("exception thrown"+ e);
     }
   }
 
@@ -39,10 +39,10 @@ public class ThrowableTester {// NOPMD
   }
 
   public ThrowableTester
-      assertException(final Class<? extends Throwable> klass) {
+  assertException(final Class<? extends Throwable> klass) {
     final String message = String.format(
         "expected %s but got %s", klass, ExceptionUtils.readStackTrace(thrown)
-    );
+        );
     assertEquals(message, klass, thrown.getClass());
     return this;
   }
@@ -51,7 +51,7 @@ public class ThrowableTester {// NOPMD
     assertTrue(
         "message does not contain: " + string + "\n got:" + thrown.getMessage(),
         thrown.getMessage().contains(string)
-    );
+        );
     return this;
   }
 
@@ -65,34 +65,34 @@ public class ThrowableTester {// NOPMD
     assertTrue(
         "message does not match. \nexpected: " + string + "\n got:" +
             thrown.getMessage(),
-        thrown.getMessage().matches(string)
-    );
+            thrown.getMessage().matches(string)
+        );
     return this;
   }
 
   public ThrowableTester
-      assertStackClass(final int stackIndex, final String string) {
+  assertStackClass(final int stackIndex, final String string) {
     final StackTraceElement stackElement = getStackTraceElement(stackIndex);
     assertEquals(string, stackElement.getClassName());
     return this;
   }
 
   public ThrowableTester
-      assertStackFileName(final int stackIndex, final String string) {
+  assertStackFileName(final int stackIndex, final String string) {
     final StackTraceElement stackElement = getStackTraceElement(stackIndex);
     assertEquals(string, stackElement.getFileName());
     return this;
   }
 
   public ThrowableTester
-      assertStackLineNumber(final int stackIndex, final int lineNumber) {
+  assertStackLineNumber(final int stackIndex, final int lineNumber) {
     final StackTraceElement stackElement = getStackTraceElement(stackIndex);
     assertEquals(lineNumber, stackElement.getLineNumber());
     return this;
   }
 
   public ThrowableTester
-      assertStackMethod(final int stackIndex, final String string) {
+  assertStackMethod(final int stackIndex, final String string) {
     final StackTraceElement stackElement = getStackTraceElement(stackIndex);
     assertEquals(string, stackElement.getMethodName());
     return this;

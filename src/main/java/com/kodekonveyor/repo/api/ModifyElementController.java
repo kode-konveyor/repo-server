@@ -1,6 +1,8 @@
 package com.kodekonveyor.repo.api;
 
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Stream;
@@ -44,36 +46,12 @@ public class ModifyElementController {
     final CheckReferenceResultEnum targetReference = checkReferenceService.call(elementEntity, elementEntity.getTarget());
 
 
-    checkSyntax(sourceReference, targetReference);
+    final Set<CheckReferenceResultEnum> invalidStates = Set.of(CheckReferenceResultEnum.NOT_FOUND_SERVER,CheckReferenceResultEnum.NOT_FOUND_LOCAL,CheckReferenceResultEnum.SYNTAX);
+    final List<CheckReferenceResultEnum> references = List.of(sourceReference,targetReference);
 
-    checkFoundLocal(sourceReference, targetReference);
-
-    checkNotFoundServer(sourceReference, targetReference);
-
-  }
-
-  private void checkNotFoundServer(
-      final CheckReferenceResultEnum sourceReference,
-      final CheckReferenceResultEnum targetReference
-      ) {
-    if(CheckReferenceResultEnum.NOT_FOUND_SERVER.equals(sourceReference) || CheckReferenceResultEnum.NOT_FOUND_SERVER.equals(targetReference))
+    if (!Collections.disjoint(invalidStates, references))
       throw new ConstraintException();
-  }
 
-  private void checkFoundLocal(
-      final CheckReferenceResultEnum sourceReference,
-      final CheckReferenceResultEnum targetReference
-      ) {
-    if(CheckReferenceResultEnum.NOT_FOUND_LOCAL.equals(sourceReference) || CheckReferenceResultEnum.NOT_FOUND_LOCAL.equals(targetReference))
-      throw new ConstraintException();
-  }
-
-  private void checkSyntax(
-      final CheckReferenceResultEnum sourceReference,
-      final CheckReferenceResultEnum targetReference
-      ) {
-    if(CheckReferenceResultEnum.SYNTAX.equals(sourceReference) || CheckReferenceResultEnum.SYNTAX.equals(targetReference))
-      throw new ConstraintException();
   }
 
   private void addModificationToSet(
