@@ -6,12 +6,7 @@ import lombok.Data;
 
 @Data
 class ModificationDTO {
-
   private Set<ElementDTO> created;
-
   private Set<ElementDTO> deleted;
-
   private Set<ElementModificationDTO> modified;
-
-
 }

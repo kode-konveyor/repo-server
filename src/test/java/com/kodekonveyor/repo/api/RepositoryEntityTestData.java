@@ -1,8 +1,6 @@
 package com.kodekonveyor.repo.api;
 
-
 public class RepositoryEntityTestData {
-
   public static final String FOUND_LOCAL_REPO_NAME = "foundLocalRepoName";
   public static final String FOUND_LOCAL_TAG_NAME = "foundLocalTagName";
   public static final String NOT_FOUND_SERVER_TAG_NAME = "notFoundServerTagName";
@@ -15,5 +13,4 @@ public class RepositoryEntityTestData {
   public static final String FOUND_SERVER_REPO_NAME = "foundServerRepoName";
   public static final String SYNTAX_TAG_NAME = "syntaxTagName";
   public static final String SYNTAX_REPO_NAME = "syntaxRepoName";
-
 }

@@ -1,6 +1,5 @@
 package com.kodekonveyor.repo.api;
 
-
 public enum CheckReferenceResultEnum {
   FOUND_LOCAL,
   FOUND_SERVER,
@@ -8,5 +7,4 @@ public enum CheckReferenceResultEnum {
   NOT_FOUND_SERVER,
   REMOTE,
   SYNTAX
-
 }

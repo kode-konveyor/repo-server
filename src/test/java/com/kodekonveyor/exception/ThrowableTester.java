@@ -11,8 +11,8 @@ public class ThrowableTester {// NOPMD
   public static void assertNoException(final Thrower thrower) {
     try {
       thrower.throwException();
-    } catch (final Throwable e) {//NOPMD
-      fail("exception thrown"+ e);
+    } catch (final Throwable e) {// NOPMD
+      fail("exception thrown: " + e);
     }
   }
 
