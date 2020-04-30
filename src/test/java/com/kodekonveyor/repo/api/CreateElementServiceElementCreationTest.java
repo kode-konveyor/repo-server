@@ -34,17 +34,6 @@ public class CreateElementServiceElementCreationTest
   }
 
   @Test
-  @DisplayName("ElementEntity created is Empty")
-  void testEmptyData() {
-    createElementService
-        .call(ElementDTOTestData.get(), RepositoryEntityTestData.get());
-    assertNotNull(
-        ElementDTOTestData.get()
-    );
-
-  }
-
-  @Test
   @DisplayName("ElementEntity's commit is saved successfully")
   void testEntityCommit() {
     createElementService
