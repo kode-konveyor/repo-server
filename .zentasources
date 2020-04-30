@@ -1,4 +1,4 @@
 <sources>
-	<source name="metamodel" type="github" repo="kode-konveyor/metamodel" path="modelparts/metamodel" branch="0.4.0"/>`
+	<source name="metamodel" type="github" repo="kode-konveyor/metamodel" path="modelparts/metamodel" branch="0.4"/>`
 	<source name="repo" type="folder" uri="modelparts/repo"/>
 </sources>
