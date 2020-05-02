@@ -1,6 +1,6 @@
 package com.kodekonveyor.exception;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.*; // NOPMD
 
 import org.junit.platform.commons.util.ExceptionUtils;
 import org.springframework.stereotype.Service;
