@@ -2,6 +2,7 @@ package com.kodekonveyor.webapp;
 
 import javax.servlet.ServletContext;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
@@ -13,11 +14,12 @@ import com.kodekonveyor.annotations.InterfaceClass;
 
 @InterfaceClass
 @ExcludeFromCodeCoverage("interface to underlaying framework")
+@Component
 public class WebAppInitializer implements WebApplicationInitializer {
 
   public static XmlWebApplicationContext context;
 
-  private XmlWebApplicationContext getContext() {
+  public XmlWebApplicationContext getContext() {
     context = new XmlWebApplicationContext();
     context.setConfigLocations("/WEB-INF/applicationContext.xml");
     return context;
