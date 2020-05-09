@@ -13,8 +13,12 @@ class ElementDTO {
 
   private String name;
 
-  private String source;
+  private String sourceId;
 
-  private String target;
+  private String SourceTag;
+
+  private String targetId;
+
+  private String TargetTag;
 
 }
