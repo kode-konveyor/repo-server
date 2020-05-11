@@ -13,4 +13,14 @@ public class RepositoryEntityTestData {
   public static final String FOUND_SERVER_REPO_NAME = "foundServerRepoName";
   public static final String SYNTAX_TAG_NAME = "syntaxTagName";
   public static final String SYNTAX_REPO_NAME = "syntaxRepoName";
+
+  public static RepositoryEntity get() {
+    final RepositoryEntity entity = new RepositoryEntity();
+    entity.setId("elementId");
+    entity.setUrl("https://repo.kodekonveyor.com/core");
+    entity.setOwner(ElementEntityTestData.getOwner());
+
+    return entity;
+  }
+
 }

@@ -1,9 +1,11 @@
 package com.kodekonveyor.repo.api;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import lombok.Data;
 
@@ -16,6 +18,14 @@ class ElementEntity {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private String id;
   private String name;
-  private String source;
-  private String target;
+  @OneToOne(fetch = FetchType.LAZY)
+  private RepositoryEntity repo;
+
+  private String sourceId;
+
+  private String SourceTag;
+
+  private String targetId;
+
+  private String TargetTag;
 }

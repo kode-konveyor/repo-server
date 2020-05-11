@@ -25,18 +25,8 @@ public class ElementDTOTestData {
   public static final String NOT_FOUND_LOCAL_ID = "NOT_FOUND_LOCAL";
   public static final String NOT_FOUND_SERVER_ID = "NOT_FOUND_SERVER";
 
-  private static ElementDTO buildElementDTO(final String id,final String commit,final String source,final String target) {// NOPMD
-    final ElementDTO element = new ElementDTO();
-    element.setId(id);
-    element.setCommit(commit);
-    element.setSource(source);
-    element.setTarget(target);
-    return element;
-  }
-  public static ElementDTO get() {
-    return buildElementDTO(FOUND_LOCAL_ID, FOUND_LOCAL_COMMIT, SOURCE_FOUND_LOCAL, TARGET_FOUND_LOCAL);
-  }
   public static ElementDTO getWithWrongSyntax() {
+    //please use get() to build the entities
     return buildElementDTO(SYNTAX_ID, SYNTAX_COMMIT, SYNTAX, SYNTAX);
   }
   public static ElementDTO getFoundServer() {
@@ -51,4 +41,19 @@ public class ElementDTOTestData {
   public static ElementDTO getNotFoundServer() {
     return buildElementDTO(NOT_FOUND_SERVER_ID, NOT_FOUND_SERVER_COMMIT, SOURCE_NOT_FOUND_SERVER, TARGET_NOT_FOUND_SERVER);
   }
+
+  public static ElementDTO get() {
+
+    final ElementDTO entity = new ElementDTO();
+    entity.setCommit("commitId");
+    entity.setDescription("The description\\n can be more lines");
+    entity.setId("elementId");
+    entity.setName("element name");
+    entity.setSourceId("elementId");
+    entity.setTargetId("elementId");
+    entity.setSourceTag("SourceTag");
+    entity.setTargetTag("TargetTag");
+    return entity;
+  }
+
 }
