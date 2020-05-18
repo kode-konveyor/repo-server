@@ -1555,12 +1555,17 @@ return the lerpoi
                                     source="de26a845-8253-4853-9d70-eb9f074c38d3"
                                     target="38327d35-fc1a-4f6e-ba40-b720a5f832e3"
                                     relationship="04695bc4-7141-4326-9927-8b35ebe8251f"/>
+                  <child xsi:type="zenta:DiagramObject"
+                         id="2e9fbcd4-6eb2-46ce-a2bf-892b7fbade13"
+                         zentaElement="d3fca5c6-8352-41b0-b25b-f3096079c816">
+                     <bounds x="12" y="24" width="-1" height="-1"/>
+                  </child>
                </child>
                <child xsi:type="zenta:DiagramObject"
                       id="a5307b41-55ee-40a2-968f-4d75794bf096"
                       targetConnections="9405539c-919d-49f2-9a98-5d514a0e09eb"
                       zentaElement="60ee03d8-a0de-451c-b8f0-8790c97148bb">
-                  <bounds x="27" y="192" width="210"/>
+                  <bounds x="27" y="216" width="210"/>
                   <sourceConnection xsi:type="zenta:Connection"
                                     id="2e456e5d-1680-4cca-8308-6f737cf9d16a"
                                     source="a5307b41-55ee-40a2-968f-4d75794bf096"
@@ -1662,6 +1667,8 @@ for each predicator in predicatorclasses
 for each entry in the stack
    let service be the service with the same name as the service name
    run the service with the entry and flattened bridi
+run the decision influencer service
+
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
@@ -1733,6 +1740,29 @@ compile an sql query using the selbri and the defined bridis, and use it to retr
                   ancestor="64fbbfdf-420d-4756-821b-54fab6e7a8d2"
                   source="cc509ca3-93be-4d2f-9dce-55d2c1dff9c7"
                   target="6e5c2123-5d7d-4d04-bf37-40e71671ec8d"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="apply priorities"
+                  id="d3fca5c6-8352-41b0-b25b-f3096079c816"
+                  ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <documentation>Obtain the bean named in the org.kodekonveyor.repo.prioritizerService, extending LojbanService
+run it on the flattened bridi
+</documentation>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  id="593406e3-5f93-42d0-bcf5-3c228b7c5dc7"
+                  ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"
+                  source="33b6f629-4740-4263-a170-ef3c0b0e0a81"
+                  target="d3fca5c6-8352-41b0-b25b-f3096079c816"/>
+         <element xsi:type="zenta:BasicRelationship"
+                  id="8e8bccdf-9b2d-4b47-97ab-fcb7be6510c6"
+                  ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
+                  source="4fd059b3-deb0-47c6-9946-6e85efc1cc3c"
+                  target="d3fca5c6-8352-41b0-b25b-f3096079c816"/>
+         <element xsi:type="zenta:BasicRelationship"
+                  id="172883ff-8007-4315-b8d3-ed4bd5b169ed"
+                  ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
+                  source="103ecc32-b46a-4ce0-a455-c012a0d06aea"
+                  target="d3fca5c6-8352-41b0-b25b-f3096079c816"/>
       </folder>
       <folder name="See model" id="4cdb69fa-0860-421e-be81-88c4dcc51aa6">
          <element xsi:type="zenta:BasicObject"
@@ -3530,7 +3560,7 @@ Clients should display html character entities for the end user with the corresp
                   id="c7dd6dc3-acb8-4a7f-a855-560a5973903f"
                   ancestor="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
          <element xsi:type="zenta:BasicRelationship"
-                  name="references;Reference,Unordered"
+                  name="references;Reference,Ordered"
                   id="4f26d0c8-4c5f-409a-af48-c7515673d8db"
                   ancestor="c8c86cdc-63e3-434a-b04a-0c950867855b"
                   source="dccd7963-adaf-48d4-84a5-192c0e46b5ca"
@@ -4540,6 +4570,58 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                   id="09ded71d-766b-418f-8848-a868bcedc6d1"
                   ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
       </folder>
+      <folder name="Interface for a controlling neural net"
+              id="3349cb6e-2454-4a7e-af99-e26b37ddf3b4">
+         <element xsi:type="zenta:ZentaDiagramModel"
+                  name="Interface for a controlling neural net"
+                  id="2275747d-2a67-450f-9924-7a35d71a7e62">
+            <child xsi:type="zenta:DiagramObject"
+                   id="7e4f2e44-305e-4a4c-aae5-1a170cb6ca0a"
+                   zentaElement="319d2478-99de-42d4-830e-81416aa90225">
+               <bounds x="126" y="123" width="187"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="6ca3b440-bf50-4968-a0aa-525cdc00546e"
+                                 source="7e4f2e44-305e-4a4c-aae5-1a170cb6ca0a"
+                                 target="3270919e-edfe-46b0-acf6-09034f77490d"
+                                 relationship="9584e8e7-fe30-47e2-bade-2a92d9b29852"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="354a2898-9290-4483-a041-b73e2d8d6c21"
+                                 source="7e4f2e44-305e-4a4c-aae5-1a170cb6ca0a"
+                                 target="26b649c4-c8f0-4be6-a3de-c954b99fc448"
+                                 relationship="b010fc19-44d8-489e-9e23-a960bcc58646"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="3270919e-edfe-46b0-acf6-09034f77490d"
+                   targetConnections="6ca3b440-bf50-4968-a0aa-525cdc00546e"
+                   zentaElement="103ecc32-b46a-4ce0-a455-c012a0d06aea">
+               <bounds x="460" y="78" width="177"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="26b649c4-c8f0-4be6-a3de-c954b99fc448"
+                   targetConnections="354a2898-9290-4483-a041-b73e2d8d6c21"
+                   zentaElement="4fd059b3-deb0-47c6-9946-6e85efc1cc3c">
+               <bounds x="460" y="204" width="177" height="85"/>
+            </child>
+         </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="Record activation of sumtis"
+                  id="103ecc32-b46a-4ce0-a455-c012a0d06aea"
+                  ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
+         <element xsi:type="zenta:BasicRelationship"
+                  id="9584e8e7-fe30-47e2-bade-2a92d9b29852"
+                  ancestor="1a16ba6a-0441-4e7d-8f9c-f6394fcdd10b"
+                  source="319d2478-99de-42d4-830e-81416aa90225"
+                  target="103ecc32-b46a-4ce0-a455-c012a0d06aea"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="Decision prioritization can be influenced with a plugin"
+                  id="4fd059b3-deb0-47c6-9946-6e85efc1cc3c"
+                  ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
+         <element xsi:type="zenta:BasicRelationship"
+                  id="b010fc19-44d8-489e-9e23-a960bcc58646"
+                  ancestor="1a16ba6a-0441-4e7d-8f9c-f6394fcdd10b"
+                  source="319d2478-99de-42d4-830e-81416aa90225"
+                  target="4fd059b3-deb0-47c6-9946-6e85efc1cc3c"/>
+      </folder>
       <element xsi:type="zenta:BasicRelationship"
                id="7c39a61a-c42d-41d9-9826-55ede3af03bb"
                ancestor="22eea5e8-d46b-4ac4-9621-7bbf22994de4"
@@ -4652,6 +4734,11 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                               source="f890aadc-6b5f-464e-8431-1cda41d8601c"
                               target="233f1cb1-104a-4036-b519-c60bb3074cd7"
                               relationship="61443ab7-a746-44f9-848d-ba76f6f6bb62"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="524d92f1-3307-415c-b435-c02e373efa56"
+                              source="f890aadc-6b5f-464e-8431-1cda41d8601c"
+                              target="75dad994-f1a7-4f94-876c-f84756363681"
+                              relationship="2903d6a6-80c3-4404-ad28-301198880a2c"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="f4858d9c-5902-4187-856a-f9589aa096e6"
@@ -4668,6 +4755,12 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                 targetConnections="25dd2a2e-a778-4fc2-90fd-6e84389d800c"
                 zentaElement="9c266d14-72df-4088-ad44-7fd151b625f7">
             <bounds x="262" y="605" width="171"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="75dad994-f1a7-4f94-876c-f84756363681"
+                targetConnections="524d92f1-3307-415c-b435-c02e373efa56"
+                zentaElement="319d2478-99de-42d4-830e-81416aa90225">
+            <bounds x="263" y="542" width="362"/>
          </child>
       </element>
       <element xsi:type="zenta:BasicObject"
@@ -4693,6 +4786,15 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                ancestor="1a16ba6a-0441-4e7d-8f9c-f6394fcdd10b"
                source="9c266d14-72df-4088-ad44-7fd151b625f7"
                target="05ec2817-51a0-46c1-a3fa-1d6fdb6bdb0f"/>
+      <element xsi:type="zenta:BasicObject"
+               name="Interface for a controlling neural net"
+               id="319d2478-99de-42d4-830e-81416aa90225"
+               ancestor="107b9a83-1292-49ee-bf2f-542de02b2654"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="2903d6a6-80c3-4404-ad28-301198880a2c"
+               ancestor="22eea5e8-d46b-4ac4-9621-7bbf22994de4"
+               source="ca5d15e3-82cc-45bb-a303-84688b311472"
+               target="319d2478-99de-42d4-830e-81416aa90225"/>
    </folder>
    <folder name="4. User Interface" id="6cdf0a01-e2bd-4ee1-ab46-7decb38a87ef">
       <folder name="main view" id="de32dbee-994d-4441-a5e6-fbdcde73408c">
@@ -5432,6 +5534,22 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                               target="e22ae9f2-4b0e-4e2a-a72f-1f621cfe43fc"
                               relationship="91cbfdc4-5cf6-4345-82ca-f2580c4ce105"/>
          </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="66396bf1-e547-45fe-a7e2-2c1cc16d4e4e"
+                zentaElement="58b9b20b-7a54-4321-99b7-f4fe96ce62a8">
+            <bounds x="997" y="103" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="6a3a3da5-61cd-4508-9914-41fd99363f4f"
+                              source="66396bf1-e547-45fe-a7e2-2c1cc16d4e4e"
+                              target="37ca0881-2e80-446c-8b88-d4aad9937c31"
+                              relationship="9822b5ff-86b7-4138-b7af-a908a7a7b5e4"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="37ca0881-2e80-446c-8b88-d4aad9937c31"
+                targetConnections="6a3a3da5-61cd-4508-9914-41fd99363f4f"
+                zentaElement="d3fca5c6-8352-41b0-b25b-f3096079c816">
+            <bounds x="1221" y="84" width="-1" height="-1"/>
+         </child>
       </element>
       <element xsi:type="zenta:BasicObject"
                name="Frontend structure"
@@ -5592,5 +5710,14 @@ plugins define the id of all of the metamodel elements they handle, and look up 
                ancestor="f0d0d4a5-201b-41b4-a047-70308c99bdb7"
                source="fa1eaad4-0323-47e5-8994-a09c325e1ebb"
                target="c0181918-4fd8-4a8f-a4be-35d8708056c6"/>
+      <element xsi:type="zenta:BasicObject"
+               name="decision prioritization"
+               id="58b9b20b-7a54-4321-99b7-f4fe96ce62a8"
+               ancestor="36a15a23-a4a0-40b5-901b-310f3a1df0c7"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="9822b5ff-86b7-4138-b7af-a908a7a7b5e4"
+               ancestor="f0d0d4a5-201b-41b4-a047-70308c99bdb7"
+               source="58b9b20b-7a54-4321-99b7-f4fe96ce62a8"
+               target="d3fca5c6-8352-41b0-b25b-f3096079c816"/>
    </folder>
 </folder>
