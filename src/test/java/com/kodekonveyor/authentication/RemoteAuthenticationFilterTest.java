@@ -35,7 +35,7 @@ public class RemoteAuthenticationFilterTest
     extends RemoteAuthenticationFilterTestBase {
 
   private void assertRemoteUserIsCorrectlySetAndCleared(final String login) {
-    verify(AuthenticationStubs.securityContext, times(2))
+    verify(AuthenticationStubs.securityContext, times(1 + 1))
         .setAuthentication(newAuthentication.capture());
     final List<Authentication> capturedValues =
         newAuthentication.getAllValues();

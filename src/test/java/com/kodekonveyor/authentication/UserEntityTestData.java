@@ -9,9 +9,10 @@ public class UserEntityTestData {
   public static final Long ID = (long) 42;
   public static final long ID_BAD = -42;
   public static final Long ID_NO_MARKET = (long) 44;
-  public static final String LOGIN = "gituser";
+  public static final String LOGIN = "user1";
   public static final String LOGIN_BAD = "badlogin";
   public static final String LOGIN_NO_MARKET = "userNoMarketUser";
+  public static final String PASSWORD = "password1";
 
   public static final UserEntity get() {
     final UserEntity user = new UserEntity();

@@ -1,0 +1,2 @@
+#!/bin/bash
+xpather "for \$id in '$1' return //element[.//@zentaElement=\$id or .//@relationship=\$id or @source=\$id or @target=\$id or @id=\$id]/concat(@name,' (', @xsi:type, ':', for \$ancie in @ancestor return //element[@id=\$ancie]/@name, ') at ', string-join(ancestor::folder/@name,'/'),codepoints-to-string(10))" $2

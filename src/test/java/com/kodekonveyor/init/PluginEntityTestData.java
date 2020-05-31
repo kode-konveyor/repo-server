@@ -2,10 +2,13 @@ package com.kodekonveyor.init;
 
 import java.util.List;
 
+import org.mockito.Mockito;
+
 public class PluginEntityTestData {
 
   public static final String SERVICE_NAME = "MetaModelCheckService";
-  public static Object SERVICE_OBJECT;
+  public static final Object SERVICE_OBJECT =
+      Mockito.mock(MetamodelChecker.class);
 
   public static PluginEntity get() {
 

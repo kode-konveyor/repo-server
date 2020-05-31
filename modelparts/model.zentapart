@@ -3,7 +3,9 @@
   
   
   
+  
   <property key="modelDependency" value="metamodel/analysis"/>
+  <property key="modelDependency" value="metamodel/ui"/>
   <property key="modelDependency" value="metamodel/design"/>
   <property key="modelDependency" value="repo/backend_design"/>
   <property key="modelDependency" value="repo/analysis"/>

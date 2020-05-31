@@ -23,7 +23,8 @@ class SeleniumTestHelper {
   }
 
   public static WebElement waitFor(final String cssSelector) {
-    final WebDriverWait wait = new WebDriverWait(driver, 20);
+    final WebDriverWait wait =
+        new WebDriverWait(driver, IntegrationtestsConstants.WAIT_TIME);
     return wait.until(
         ExpectedConditions.elementToBeClickable(
             By.cssSelector(cssSelector)

@@ -35,7 +35,7 @@ public class WebservicesIT {
   @BeforeEach
   public void setUp() {
     mapper = new ObjectMapper();
-    urlBase = "http://127.0.0.1:8080/server";
+    urlBase = IntegrationtestsConstants.LOCAL_SERVER_URI;
   }
 
   @Test
@@ -46,7 +46,10 @@ public class WebservicesIT {
     final HttpURLConnection connection =
         (HttpURLConnection) url.openConnection();
     connection
-        .setRequestProperty("OIDC_CLAIM_nickname", UserEntityTestData.LOGIN);
+        .setRequestProperty(
+            IntegrationtestsConstants.OIDC_CLAIM_NICKNAME,
+            UserEntityTestData.LOGIN
+        );
     final UserDTO marketUser = mapper
         .readValue((InputStream) connection.getContent(), UserDTO.class);
     assertEquals(UserEntityTestData.LOGIN, marketUser.getLogin());

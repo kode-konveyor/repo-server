@@ -33,8 +33,6 @@ import com.kodekonveyor.logging.LoggerService;
 public class RemoteAuthenticationFilter extends GenericFilterBean
     implements Filter {
 
-  private static final String NICKNAME_HEADER = "OIDC_CLAIM_nickname";
-
   @Autowired
   private LoggerService loggerService;
 
@@ -66,26 +64,31 @@ public class RemoteAuthenticationFilter extends GenericFilterBean
       mdc =
           webApplicationContext.getBean(SlfMDCWrapper.class);
     }
-    loggerService.call("authenticating", LogSeverityEnum.DEBUG, "");
+    loggerService.call(
+        AuthenticationConstants.AUTHENTICATING, LogSeverityEnum.DEBUG,
+        AuthenticationConstants.EMPTY_MESSAGE
+    );
     final HttpServletRequest httpRequest = (HttpServletRequest) req;
     final SecurityContext context = SecurityContextHolder.getContext();
     final Enumeration<String> names = httpRequest.getHeaderNames();
     loggerService
         .call(
-            "headers", LogSeverityEnum.DEBUG,
+            AuthenticationConstants.HEADERS, LogSeverityEnum.DEBUG,
             ((Boolean) names.hasMoreElements()).toString()
         );
     while (names.hasMoreElements()) {
       final String name = names.nextElement();
       loggerService.call(
-          "header", LogSeverityEnum.DEBUG,
-          name + ":" + httpRequest.getHeader(name)
+          AuthenticationConstants.HEADER, LogSeverityEnum.DEBUG,
+          name + AuthenticationConstants.COLON + httpRequest.getHeader(name)
       );
     }
-    final String login = httpRequest.getHeader(NICKNAME_HEADER);
-    mdc.put("auth.user", login);
-    mdc.put("auth.session", UUID.randomUUID().toString());
-    loggerService.call("login", LogSeverityEnum.INFO, login);
+    final String login =
+        httpRequest.getHeader(AuthenticationConstants.NICKNAME_HEADER);
+    mdc.put(AuthenticationConstants.AUTH_USER, login);
+    mdc.put(AuthenticationConstants.AUTH_SESSION, UUID.randomUUID().toString());
+    loggerService
+        .call(AuthenticationConstants.LOGIN, LogSeverityEnum.INFO, login);
     final List<UserEntity> users =
         userEntityRepository.findByLogin(login);
     UserEntity user;

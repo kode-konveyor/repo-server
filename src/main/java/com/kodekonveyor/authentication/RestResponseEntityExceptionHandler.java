@@ -35,14 +35,16 @@ public class RestResponseEntityExceptionHandler
       final RuntimeException exception, final WebRequest request
   ) {
     final StackTraceElement location = exception.getStackTrace()[0];
-    final String message =
-        exception.getClass().getSimpleName() + ":" + exception.getMessage() +
-            " at " +
-            location.getFileName() + ":" +
-            location.getLineNumber();
+    final String message = String.format(
+        AuthenticationConstants.EXCEPTION_MESSAGE_FORMAT,
+        exception.getClass().getSimpleName(),
+        exception.getMessage(),
+        location.getFileName(),
+        location.getLineNumber()
+    );
     loggerService
         .call(
-            "exception", LogSeverityEnum.ERROR,
+            AuthenticationConstants.EXCEPTION_CATEGORY, LogSeverityEnum.ERROR,
             message
         );
 
