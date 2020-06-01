@@ -15,6 +15,6 @@ public class PluginEntity {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
-  public String metamodelCheckServiceName;
+  private String metamodelCheckServiceName;
 
 }

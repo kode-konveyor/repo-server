@@ -1,6 +1,8 @@
-package com.kodekonveyor.init;
+package com.kodekonveyor.repo.api;
 
 import org.mockito.Mockito;
+
+import com.kodekonveyor.init.PluginEntityTestData;
 
 public class GetServiceByNameServiceStubs {
 
