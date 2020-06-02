@@ -3314,12 +3314,6 @@ See Version management metamodel for the description of the version metamodel</d
                         name="ModifyElementsController"
                         id="539b0da9-982e-4962-b231-b14a83651cf6"
                         ancestor="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
-               <element xsi:type="zenta:BasicRelationship"
-                        name=";Interface,DTO,One"
-                        id="f4a02a42-b042-4f08-bafa-f8e295db42a1"
-                        ancestor="64fbbfdf-420d-4756-821b-54fab6e7a8d2"
-                        source="f5ed7668-7122-4af6-9855-6529e2e8c503"
-                        target="84dd3695-0219-4010-b240-72bed03fc005"/>
             </folder>
             <folder name="ModificationsTestData" id="d8b07b18-6131-44a5-bc0e-40b329366e7f">
                <element xsi:type="zenta:ZentaDiagramModel"

@@ -849,6 +849,12 @@ return the lerpoi
                      ancestor="d9f4a80e-d07b-4767-ad0a-aa86988783f8"
                      source="30023830-ec73-4dd3-82f6-7630eac3e1c7"
                      target="399cd3db-9cf9-4a26-b2f2-154367f8d2c4"/>
+            <element xsi:type="zenta:BasicRelationship"
+                     name=";Interface,DTO,One"
+                     id="f4a02a42-b042-4f08-bafa-f8e295db42a1"
+                     ancestor="64fbbfdf-420d-4756-821b-54fab6e7a8d2"
+                     source="f5ed7668-7122-4af6-9855-6529e2e8c503"
+                     target="84dd3695-0219-4010-b240-72bed03fc005"/>
          </folder>
          <folder name="3. core plugin" id="4a89e78d-3eed-4ec4-86bd-a839cfcb12b1">
             <element xsi:type="zenta:ZentaDiagramModel"
