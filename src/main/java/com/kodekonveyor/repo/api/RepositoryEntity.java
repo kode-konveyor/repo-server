@@ -19,5 +19,8 @@ public class RepositoryEntity {
   private String id;
   @OneToOne(fetch = FetchType.LAZY)
   private ElementEntity owner;
+
+  @OneToOne(fetch = FetchType.LAZY)
+  private SumtiEntity sumti;
   private String url;
 }
