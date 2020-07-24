@@ -7,6 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 public interface LerpoiEntityRepository
     extends CrudRepository<LerpoiEntity, Long> {
 
-  Optional<LerpoiEntity> findByText(String repoName);
+  Optional<LerpoiEntity> findByName(String repoName);
 
 }

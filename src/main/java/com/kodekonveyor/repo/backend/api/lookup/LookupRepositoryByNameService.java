@@ -23,13 +23,14 @@ public class LookupRepositoryByNameService {
   private SumtiEntityRepository sumtiEntityRepository;
 
   public SumtiDTO call(final String repoName) {
-    final LerpoiEntity lerpoiEntity =
-        lerpoiEntityRepository.findByText(repoName).get();
-
+    final Optional<LerpoiEntity> lerpoiEntity =
+        lerpoiEntityRepository.findByName(repoName);
+    if (lerpoiEntity.isEmpty())
+      throw new ValidationException(SumtiConstants.LERPOI_NOT_FOUND_EXCEPTION);
     final Optional<SumtiEntity> sumtiEnity =
-        sumtiEntityRepository.findByLerpoi(lerpoiEntity);
+        sumtiEntityRepository.findByLerpoi(lerpoiEntity.get());
     if (sumtiEnity.isEmpty())
-      throw new ValidationException(SumtiConstants.NOT_FOUND_EXCEPTION);
+      throw new ValidationException(SumtiConstants.SUMTI_NOT_FOUND_EXCEPTION);
     final SumtiDTO sumtiDTO = new SumtiDTO();
     sumtiDTO.setBridi(sumtiEnity.get().getBridi().getId());
     sumtiDTO.setLerpoi(sumtiEnity.get().getLerpoi().getId());

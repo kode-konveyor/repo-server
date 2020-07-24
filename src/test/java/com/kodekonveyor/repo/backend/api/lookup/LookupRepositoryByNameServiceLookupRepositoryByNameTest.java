@@ -36,7 +36,7 @@ public class LookupRepositoryByNameServiceLookupRepositoryByNameTest
     SumtiEntityRepositoryStubs.behaviour(sumtiEntityRepository);
     assertEquals(
         SumtiDTOTestData.get(),
-        lookupRepoByNameService.call(LerpoiTestData.TEXT)
+        lookupRepoByNameService.call(LerpoiTestData.NAME)
     );
   }
 
@@ -49,7 +49,7 @@ public class LookupRepositoryByNameServiceLookupRepositoryByNameTest
     SumtiEntityRepositoryStubs.behaviour(sumtiEntityRepository);
     assertEquals(
         SumtiDTOTestData.get().getUuid(),
-        lookupRepoByNameService.call(LerpoiTestData.TEXT).getUuid()
+        lookupRepoByNameService.call(LerpoiTestData.NAME).getUuid()
     );
   }
 
@@ -62,7 +62,7 @@ public class LookupRepositoryByNameServiceLookupRepositoryByNameTest
     SumtiEntityRepositoryStubs.behaviour(sumtiEntityRepository);
     assertEquals(
         SumtiDTOTestData.get().getLerpoi(),
-        lookupRepoByNameService.call(LerpoiTestData.TEXT).getLerpoi()
+        lookupRepoByNameService.call(LerpoiTestData.NAME).getLerpoi()
     );
   }
 
@@ -75,7 +75,7 @@ public class LookupRepositoryByNameServiceLookupRepositoryByNameTest
     SumtiEntityRepositoryStubs.behaviour(sumtiEntityRepository);
     assertEquals(
         SumtiDTOTestData.get().getBridi(),
-        lookupRepoByNameService.call(LerpoiTestData.TEXT).getBridi()
+        lookupRepoByNameService.call(LerpoiTestData.NAME).getBridi()
     );
   }
 
@@ -87,8 +87,21 @@ public class LookupRepositoryByNameServiceLookupRepositoryByNameTest
     LerpoiEntityRepositoryStubs.behaviour(lerpoiEntityRepository);
     SumtiEntityRepositoryStubs.sumtiNotExists(sumtiEntityRepository);
     ThrowableTester
-        .assertThrows(() -> lookupRepoByNameService.call(LerpoiTestData.TEXT))
-        .assertMessageIs(LookupRepoByNmaeTestData.NOT_FOUND_EXCEPTION);
+        .assertThrows(() -> lookupRepoByNameService.call(LerpoiTestData.NAME))
+        .assertMessageIs(LookupRepoByNmaeTestData.SUMTI_NOT_FOUND_EXCEPTION);
+
+  }
+
+  @Test
+  @DisplayName(
+    "if Lerpoi for given Name does not exist in repository, we throw an exception"
+  )
+  void test5() {
+    LerpoiEntityRepositoryStubs.lerpoiNotExists(lerpoiEntityRepository);
+
+    ThrowableTester
+        .assertThrows(() -> lookupRepoByNameService.call(LerpoiTestData.NAME))
+        .assertMessageIs(LookupRepoByNmaeTestData.LERPOI_NOT_FOUND_EXCEPTION);
 
   }
 
