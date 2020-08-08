@@ -14,8 +14,16 @@ public class LerpoiEntityRepositoryStubs {
       behaviour(final LerpoiEntityRepository lerpoiEntityRepository) {
     Mockito.doReturn(Optional.of(LerpoiEntityTestData.get()))
         .when(lerpoiEntityRepository)
-        .findByText(LerpoiTestData.TEXT);
+        .findByName(LerpoiTestData.NAME);
 
+  }
+
+  public static void
+      lerpoiNotExists(final LerpoiEntityRepository lerpoiEntityRepository) {
+
+    Mockito.doReturn(Optional.empty())
+        .when(lerpoiEntityRepository)
+        .findByName(LerpoiTestData.NAME);
   }
 
 }

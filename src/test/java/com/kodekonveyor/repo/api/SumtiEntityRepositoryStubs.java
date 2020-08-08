@@ -1,6 +1,6 @@
 package com.kodekonveyor.repo.api;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.mockito.Mockito;
 
@@ -8,13 +8,13 @@ public class SumtiEntityRepositoryStubs {
 
   public static void
       behaviour(final SumtiEntityRepository sumtiEntityRepository) {
-    Mockito.doReturn(Optional.of(SumtiEntityTestData.get()))
+    Mockito.doReturn(List.of(SumtiEntityTestData.get()))
         .when(sumtiEntityRepository).findByLerpoi(LerpoiEntityTestData.get());
   }
 
   public static void
       sumtiNotExists(final SumtiEntityRepository sumtiEntityRepository) {
-    Mockito.doReturn(Optional.empty())
+    Mockito.doReturn(List.of())
         .when(sumtiEntityRepository).findByLerpoi(LerpoiEntityTestData.get());
 
   }
