@@ -32,11 +32,10 @@ public class LookupRepositoryByNameServiceLookupRepositoryByNameTest
     "looks up the sumti which is a repository, with the lerpoi given"
   )
   void test() {
-    LerpoiEntityRepositoryStubs.behaviour(lerpoiEntityRepository);
-    SumtiEntityRepositoryStubs.behaviour(sumtiEntityRepository);
+
     assertEquals(
         SumtiDTOTestData.get(),
-        lookupRepoByNameService.call(LerpoiTestData.NAME)
+        lookupRepoByNameService.call(LerpoiTestData.NAME).get(0)
     );
   }
 
@@ -45,11 +44,9 @@ public class LookupRepositoryByNameServiceLookupRepositoryByNameTest
     "UUID of the Sumti is returned successfully"
   )
   void test1() {
-    LerpoiEntityRepositoryStubs.behaviour(lerpoiEntityRepository);
-    SumtiEntityRepositoryStubs.behaviour(sumtiEntityRepository);
     assertEquals(
         SumtiDTOTestData.get().getUuid(),
-        lookupRepoByNameService.call(LerpoiTestData.NAME).getUuid()
+        lookupRepoByNameService.call(LerpoiTestData.NAME).get(0).getUuid()
     );
   }
 
@@ -58,11 +55,9 @@ public class LookupRepositoryByNameServiceLookupRepositoryByNameTest
     "Lerpoi ID of the Sumti is returned successfully"
   )
   void test2() {
-    LerpoiEntityRepositoryStubs.behaviour(lerpoiEntityRepository);
-    SumtiEntityRepositoryStubs.behaviour(sumtiEntityRepository);
     assertEquals(
         SumtiDTOTestData.get().getLerpoi(),
-        lookupRepoByNameService.call(LerpoiTestData.NAME).getLerpoi()
+        lookupRepoByNameService.call(LerpoiTestData.NAME).get(0).getLerpoi()
     );
   }
 
@@ -71,11 +66,9 @@ public class LookupRepositoryByNameServiceLookupRepositoryByNameTest
     "Bridi ID of the Sumti is returned successfully"
   )
   void test3() {
-    LerpoiEntityRepositoryStubs.behaviour(lerpoiEntityRepository);
-    SumtiEntityRepositoryStubs.behaviour(sumtiEntityRepository);
     assertEquals(
         SumtiDTOTestData.get().getBridi(),
-        lookupRepoByNameService.call(LerpoiTestData.NAME).getBridi()
+        lookupRepoByNameService.call(LerpoiTestData.NAME).get(0).getBridi()
     );
   }
 
@@ -84,7 +77,6 @@ public class LookupRepositoryByNameServiceLookupRepositoryByNameTest
     "if sumti for given lerpoi does not exist in repository, we throw an exception"
   )
   void test4() {
-    LerpoiEntityRepositoryStubs.behaviour(lerpoiEntityRepository);
     SumtiEntityRepositoryStubs.sumtiNotExists(sumtiEntityRepository);
     ThrowableTester
         .assertThrows(() -> lookupRepoByNameService.call(LerpoiTestData.NAME))
