@@ -1,28 +1,21 @@
 package com.kodekonveyor.repo.api;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 import lombok.Data;
 
-@Entity
 @Data
-public class SumtiEntity {
+@Entity
+public class LerpoiEntity {
 
-  @OneToOne(fetch = FetchType.LAZY)
-  private BridiEntity bridi;
+  private String description;
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @OneToOne(fetch = FetchType.LAZY)
-  private LerpoiEntity lerpoi;
-
-  private String uuid;
-
+  private String name;
 }
