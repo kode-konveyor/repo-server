@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.mockito.Mockito;
 
-import com.kodekonveyor.repo.api.SumtiEntityRepository;
-
 public class SumtiEntityRepositoryStubs {
 
   public static void

@@ -1,7 +1,5 @@
 package com.kodekonveyor.repo.api;
 
-import com.kodekonveyor.repo.api.SumtiEntity;
-
 public class SumtiEntityTestData {
 
   public static SumtiEntity get() {
