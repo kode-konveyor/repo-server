@@ -2,15 +2,10 @@ package com.kodekonveyor.repo.backend.api.lookup;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.kodekonveyor.exception.ValidationException;
-import com.kodekonveyor.repo.api.LerpoiEntity;
-import com.kodekonveyor.repo.api.LerpoiEntityRepository;
-import com.kodekonveyor.repo.api.SumtiConstants;
 import com.kodekonveyor.repo.api.SumtiDTO;
 import com.kodekonveyor.repo.api.SumtiEntity;
 import com.kodekonveyor.repo.api.SumtiEntityRepository;
@@ -19,26 +14,20 @@ import com.kodekonveyor.repo.api.SumtiEntityRepository;
 public class LookupTagByNameService {
 
   @Autowired
-  private LerpoiEntityRepository lerpoiEntityRepository;
-
-  @Autowired
   private SumtiEntityRepository sumtiEntityRepository;
 
   public List<SumtiDTO> call(final String repoName) {
-    final Optional<LerpoiEntity> lerpoiEntity =
+    /*final Optional<LerpoiEntity> lerpoiEntity =
         lerpoiEntityRepository.findByName(repoName);
     if (lerpoiEntity.isEmpty())
       throw new ValidationException(
           SumtiConstants.LERPOI_NOT_FOUND_EXCEPTION_FOR_TAG_LOOKUP
-      );
-    final List<SumtiEntity> sumtiEntity =
-        sumtiEntityRepository.findByLerpoi(lerpoiEntity.get());
-    if (sumtiEntity.isEmpty())
-      throw new ValidationException(
-          SumtiConstants.SUMTI_NOT_FOUND_EXCEPTION_FOR_TAG_LOOKUP
-      );
+      );*/
     final List<SumtiDTO> sumtiDTOS = new ArrayList<>();
-    for (final SumtiEntity sumti : sumtiEntity)
+    final List<SumtiEntity> sumtiEntities =
+        sumtiEntityRepository.findByLerpoiName(repoName);
+
+    for (final SumtiEntity sumti : sumtiEntities)
       sumtiDTOS.add(createDTOConversion(sumti));
     return sumtiDTOS;
 
