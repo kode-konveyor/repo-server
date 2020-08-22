@@ -72,33 +72,4 @@ public class LookupTagByNameServiceLookupTagByNameTest
       );
   }
 
-  /*@Test
-  @DisplayName(
-    "if sumti for given lerpoi does not exist in repository, we throw an exception"
-  )
-  void test4() {
-    SumtiEntityRepositoryStubs.sumtiNotExists(sumtiEntityRepository);
-    ThrowableTester
-        .assertThrows(() -> lookupTagByNameService.call(LerpoiTestData.NAME))
-        .assertMessageIs(
-            LookupTagByNameTestData.SUMTI_NOT_FOUND_EXCEPTION_FOR_TAG_LOOKUP
-        );
-
-  }
-
-  @Test
-  @DisplayName(
-    "if Lerpoi for given Name does not exist in repository, we throw an exception"
-  )
-  void test5() {
-    LerpoiEntityRepositoryStubs.lerpoiNotExists(lerpoiEntityRepository);
-
-    ThrowableTester
-        .assertThrows(() -> lookupTagByNameService.call(LerpoiTestData.NAME))
-        .assertMessageIs(
-            LookupTagByNameTestData.LERPOI_NOT_FOUND_EXCEPTION_FOR_TAG_LOOKUP
-        );
-
-  }
-  */
 }
