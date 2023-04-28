@@ -1,10 +1,9 @@
+import mongoose from "mongoose";
 import { SELBRI_SCHEMA } from "./Constants.js";
-import { mongooseInstance } from "./mongooseInstance.js";
+import { type SelbriDTO } from "../DTO/SelbriDTO.js";
 
-const mongoose = mongooseInstance.getMongoose();
-
-const selbriSchema = new mongoose.Schema({
-  representation: String,
+const selbriSchema = new mongoose.Schema<SelbriDTO>({
+  representation: { type: String, required: true },
 });
 
-export const SelbriDAO = mongoose.model(SELBRI_SCHEMA, selbriSchema);
+export const SelbriDAO = mongoose.model<SelbriDTO>(SELBRI_SCHEMA, selbriSchema);

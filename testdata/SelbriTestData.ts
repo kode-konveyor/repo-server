@@ -6,4 +6,8 @@ export const SelbriTestData = {
     id: "thing",
     representation: "Thing",
   },
+  saved: {
+    id: "foo",
+    representation: "Thing",
+  },
 } satisfies TestDataDescriptor<SelbriDTO>;
